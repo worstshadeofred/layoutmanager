@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Instrument+Serif:ital@0;1&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div id="right-side">
+            <iframe id="page"></iframe>
+        </div>
+        <div id="left-side">
+
+            <!--<svg id="title-card-container">
+                <text id="title-card" text-anchor="middle" dominant-baseline="middle" y="50%" x="50%">
+                    LAYOUT MANAGER
+                </text>
+            </svg>-->
+
+            <div id="settings">
+                
+                <div id="images">
+                    <div id="drop-area">
+                        <span style="font-size: 50px; font-weight: 600;color:rgba(255,255,255,0.8);pointer-events: none;">Drop image anywhere</span>
+                        <span style="font-size: 24px; font-weight: 200;color:rgba(255,255,255,0.8);pointer-events: none;">Go ahead!! :> </span>
+                    </div>
+                    <label for="upload-image-input" id="upload-image"><span class="material-icons" >
+                        add_circle
+                        </span>Upload Image</label>
+                    <input type="file" name="image" id="upload-image-input">
+                    <span style="font-size: 3px;"> or drop image anywhere </span>
+                    <div style="margin-top: 10px; display: flex; flex-direction: row; align-items: center; gap: 8px;">
+                        <span>Paste image</span>
+                        <div id="center-items" style="width: 35px; height: 30px;background-color: white;border-radius: 5px;border-style: solid;border-color: #c4c4c4;border-width: 1px;">Ctrl</div>
+                        <span>+</span>
+                        <div id="center-items" style="width: 25px; height: 30px;background-color: white;border-radius: 5px;border-style: solid;border-color: #c4c4c4;border-width: 1px;">V</div>
+                    </div>
+                </div>
+                <!--<div id="upload-list-container">
+                    <div id="upload-list">
+                        
+                    </div>   
+                </div>-->
+                
+                <div id="paper-size" style="overflow: visible; width: 120%; display: flex;justify-content: center;gap: 10px;align-items: center;">
+                    <span>Paper Size:</span>
+                    <select name="paper-size" id="paper-size-select">
+                        <option value="A4">A4 (210mm x 297mm)</option>
+                        <option value="Letter">Letter (8.5in x 11in)</option>
+                        <option value="Legal">Legal (8.5in x 13in)</option>
+                    </select>
+                </div>
+                
+                <label id="print-button">
+                    <span class="material-icons">print</span>
+                    Print
+                </label>
+                
+                
+            </div>
+
+        </div>
+        <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"/>
+        <script
+  src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"
+  integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc="
+  crossorigin="anonymous"></script>
+        <script src="bundle.js"></script>
+    </body>
+</html>

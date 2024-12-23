@@ -1,0 +1,240 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#center-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-card-container{
+    width: 100%;
+    left: 50%;
+    top: 120px;
+    transform:translate(-50%, -50%);
+    position: absolute;
+    overflow: visible;
+}
+
+#title-card{
+    font-size: 2.4vw;
+    z-index: 1;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 800;
+    fill: #d4efff;
+    stroke: #121414;
+    stroke-linejoin: round;
+    stroke-width: 20px;
+    paint-order: stroke;
+    
+}
+
+#right-side{
+    position: absolute;
+    width: 55%;
+    height: 100vh;
+    background-color: #234e6b;
+    z-index: 0;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left-side{
+    position: absolute;
+    width: 45%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page{
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.35));
+    border: none;
+    background-color: white;
+    width: 57%;
+    height: auto;
+    aspect-ratio: 8.5/11;
+}
+
+
+#settings{
+    font-family: 'Instrument Sans', 'sans-serif';
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#images{
+    aspect-ratio: 2.35/1;
+    width: auto;
+    height: 27%;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: #c4c4c4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:8px;
+}
+
+#drop-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    flex-wrap: wrap;
+    gap:10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    pointer-events:all;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0,0,0,0.5);
+    visibility: hidden;
+}
+
+#drop-area * {
+    pointer-events: none;
+}
+
+#upload-list-container{
+    width: 100%;;
+    height: 14%;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: #c4c4c4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:8px;
+}
+
+#upload-list{
+    width: 100%;;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:8px;
+}
+
+#upload-image{
+    margin-top: 7.5%;
+    display: flex;
+    cursor: pointer;
+    width: 40%;
+    height: 25%;
+    border-radius: 5px;
+    gap:6px;
+    justify-content: center;
+    align-items: center;
+    background-color: #234e6b;
+    color: white;
+    z-index: 2;
+    
+}
+
+#upload-image-input{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+#paper-size-select{
+    position: relative;
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none;
+    width: 43%;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4c4c4;
+    background-color: #ebebeb;
+}
+
+#paper-size::before,
+#paper-size::after {
+  --size: 0.25rem;
+  position: relative;
+  content: "";
+  pointer-events: none;
+}
+
+#paper-size::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: -9%;
+  right: -60%;
+  z-index: 1;
+}
+
+#paper-size::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 9%;
+  left: -6.85%;
+}
+
+#print-button{
+    display: flex;
+    cursor: pointer;
+    width: 30%;
+    height: 7%;
+    border-radius: 5px;
+    gap:6px;
+    justify-content: center;
+    align-items: center;
+    background-color: #234e6b;
+    color: white;
+    z-index: 2;
+    cursor: pointer;
+}
+
+@media print{
+    @page{
+        margin: 0;
+        size: A4;
+    }
+    .upimg{
+        resize: none !important;
+    }
+}
