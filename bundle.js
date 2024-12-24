@@ -6,7 +6,7 @@ $(document).ready(function(){
         paper_size_selector = $("#paper-size-select")
     contents.find('head').append("<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>");
     body.append("<script src='closehandler.js'><\/script>");
-    body.append("<style type='text/css'> body{overflow:hidden;} .img-remove{backdrop-filter:blur(10px);align-items:center;color:white;font-size:100%;display:flex;justify-content:center;z-index:2;width:4%;aspect-ratio:1;position:absolute;top:3%;right:5%;padding:2px;cursor:pointer;} @media print {.upimg{resize: none !important;} .img-remove{visibility:hidden;}}</style>")
+    body.append("<style type='text/css'> body{overflow:hidden;} .img-remove{backdrop-filter:blur(10px);align-items:center;color:red;font-size:100%;display:flex;justify-content:center;z-index:2;width:4%;aspect-ratio:1;position:absolute;top:3%;right:5%;padding:2px;cursor:pointer;} @media print {.upimg{resize: none !important;} .img-remove{visibility:hidden;}}</style>")
     body.append("<div style='width:100%;height:100%;display:flex;flex-direction:row;flex-wrap:wrap;gap:0.5%;align-content:flex-start;justify-content:flex-start;align-items:flex-start'></div>");
     body.css({"margin":"0","padding-top":"8%","padding-bottom":"8%","padding-right":"8%","padding-left":"8%"})
 
